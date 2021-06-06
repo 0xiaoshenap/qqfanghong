@@ -18,7 +18,7 @@ function getQueryVariable(variable)
 }
 var u=getQueryVariable("u");
 u = u.replace(':||', '://');
-u = u.replace('@', '.');
+u = u.replace('$', '.');
 console.log(u);
 document.getElementById("infrm").src=u;
 document.body.parentNode.style.overflow = "hidden";
