@@ -18,7 +18,7 @@ function getQueryVariable(variable)
 }
 var u=getQueryVariable("u");
 u = u.replace('%3A%7C%7C', '://');
-u = u.replace(/\%24/g, '.');
+u = u.replaceAll('%24','.')
 console.log(u);
 document.getElementById("infrm").src=u;
 document.body.parentNode.style.overflow = "hidden";
