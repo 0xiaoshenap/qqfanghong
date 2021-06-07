@@ -20,6 +20,8 @@ var u=getQueryVariable("u");
 u = u.replace('%3A%7C%7C', '://');
 u = u.replace(/\%24/g,".")
 u = u.replace(/\%7E/g,"&")
+u = u.replace(/\%EF\%BC\%9F/g,"?")
+u = u.replace(/\%E7\%AD\%89/g,"=")
 console.log(u);
 document.getElementById("infrm").src=u;
 document.body.parentNode.style.overflow = "hidden";
