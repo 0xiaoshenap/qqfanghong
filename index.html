@@ -23,6 +23,7 @@ u = u.replace(/\%EF\%BC\%9F/g,"?")
 u = u.replace(/\%E7\%AD\%89/g,"=")
 u = u.replace(/\%2F/g,"/")
 document.title = encodeURI(getQueryVariable("t"));
+	alert(encodeURI(getQueryVariable("t")));
 console.log(u);
 document.getElementById("infrm").src=u;
 document.body.parentNode.style.overflow = "hidden";
